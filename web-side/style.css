@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #61dafb;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1ad5;
+    display: none;
+    z-index: 1;
+}
+
+#ui-container {
+    display: none;
+}
+
+#spawn-menu,
+#create-character {
+    width: 500;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.characters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.characters::-webkit-scrollbar {
+    width: 5px;
+}
+
+.characters::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+}
+
+.characters::-webkit-scrollbar-thumb {
+    background-color: #C3EF3C;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+}
+
+#character-list {
+    position: relative;
+    padding: 6px 80px;
+    background: #1A1A1AE3;
+    border: 1.78px solid #C3EF3C;
+    color: #C3EF3C;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.character-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* align-items: center; */
+}
+
+.character-name {
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 99;
+}
+
+.character-id {
+    font-size: 14px;
+    font-weight: 300;
+    z-index: 99;
+}
+
+#new-character {
+    width: 100%;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 70px;
+    background: #1A1A1AE3;
+    border: 1.78px solid #C3EF3C;
+    color: #C3EF3C;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #61dafb;
+    color: #20232a;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #61dafb;
+    border-radius: 4px;
+    background-color: #20232a;
+    color: #61dafb;
+}
+
+.SpawnLocations {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.LocationsList {
+    margin-top: 10px;
+}
+
+.SpawnLocationBox {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.SpawnLocationBox:hover {
+    background-color: #555;
+}
+
+.SpawnLocationSubmit {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.SpawnLocationSubmit:hover {
+    background-color: #218838;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #c2ef3c93;
+    z-index: 999;
+}
+
+.comprar-personagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #1A1A1AE3;
+    z-index: 999;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid #C3EF3C;
+    border-radius: 10px;
+    display: none;
+}
+
+.comprar-personagem h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.comprar-personagem p {
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.comprar-personagem span {
+    color: #C3EF3C;
+    font-weight: bold;
+}
+
+.comprar-personagem .btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comprar-personagem .btns button {
+    padding: 10px 30px;
+    background-color: #1A1A1AE3;
+    border: 1px solid #C3EF3C;
+    font-size: 16px;
+    color: white;
+}
+
+.comprar-personagem .btns #confirmar {
+    background-color: #C3EF3C;
+    color: black;
+    font-weight: bold;
+}
